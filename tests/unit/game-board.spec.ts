@@ -1,14 +1,6 @@
 import { describe, it, expect } from 'vitest';
-
-// Types for the game logic we'll implement
-type Player = 'X' | 'O';
-type Cell = Player | null;
-type Board = Cell[];
-
-// These functions will be implemented in src/logic/gameState.ts
-declare function checkWinner(board: Board): Player | null;
-declare function checkDraw(board: Board): boolean;
-declare function isValidMove(board: Board, position: number): boolean;
+import { checkWinner, checkDraw, isValidMove } from '../../src/logic/gameState';
+import type { Board } from '../../src/types';
 
 describe('Game Board Logic - Win Detection', () => {
   it('should detect horizontal win - top row', () => {

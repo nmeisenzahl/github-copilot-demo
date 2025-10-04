@@ -1,12 +1,6 @@
 import { describe, it, expect } from 'vitest';
-
-// Types for the game logic we'll implement
-type Player = 'X' | 'O';
-type Cell = Player | null;
-type Board = Cell[];
-
-// This function will be implemented in src/logic/aiEasy.ts
-declare function getEasyAIMove(board: Board): number;
+import { getEasyAIMove } from '../../src/logic/aiEasy';
+import type { Board } from '../../src/types';
 
 describe('Easy AI - Random Move Selection', () => {
   it('should return a valid empty position', () => {
