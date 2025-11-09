@@ -34,6 +34,10 @@ specify init . --ai copilot
 
 ```
 
+``` markdown
+Implement an eye-catching scoreboard in the replay view and save it in the browser's local storage.
+```
+
 ## Review outcome
 
 * Issue: https://github.com/nmeisenzahl/github-copilot-demo/issues/2
