@@ -1,0 +1,203 @@
+.app {
+  text-align: center;
+}
+
+.start-screen,
+.game-screen {
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Start Screen */
+.difficulty-selection {
+  margin-bottom: 2rem;
+}
+
+.difficulty-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.difficulty-buttons button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 3px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.difficulty-buttons button:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.difficulty-buttons button:focus {
+  outline: 3px solid #764ba2;
+  outline-offset: 2px;
+}
+
+.difficulty-buttons button.selected {
+  background: #667eea;
+  color: white;
+}
+
+.start-button {
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.start-button:focus {
+  outline: 3px solid #764ba2;
+  outline-offset: 3px;
+}
+
+/* Game Screen */
+.game-info {
+  margin-bottom: 2rem;
+  min-height: 2rem;
+}
+
+.game-info p {
+  font-size: 1.2rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.game-result {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #667eea;
+  margin: 1rem 0;
+}
+
+/* Game Board */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.cell {
+  aspect-ratio: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  background: #f0f0f0;
+  border: 3px solid #ddd;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #333;
+}
+
+.cell:not(:disabled):hover {
+  background: #e0e0e0;
+  border-color: #667eea;
+  transform: scale(1.05);
+}
+
+.cell:focus {
+  outline: 3px solid #764ba2;
+  outline-offset: 2px;
+}
+
+.cell:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.cell.filled {
+  background: #e8e8ff;
+}
+
+/* Play Again Button */
+.play-again-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.play-again-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.play-again-button:focus {
+  outline: 3px solid #764ba2;
+  outline-offset: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .start-screen,
+  .game-screen {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .difficulty-buttons {
+    flex-direction: column;
+  }
+
+  .difficulty-buttons button {
+    width: 100%;
+  }
+
+  .game-board {
+    max-width: 300px;
+  }
+
+  .cell {
+    font-size: 2.5rem;
+  }
+}
